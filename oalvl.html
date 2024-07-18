@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O & A Levels</title>
+    <link rel="stylesheet" href="Css/olstyle.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo"><img src="Assets/logo.jpg" alt="Logo"></div>
+        <ul class="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Academics <span class="arrow">&#9662;</span></a>
+                <div class="dropdown-content">
+                    <a href="oalvl.html">O & A Levels</a>
+                    <a href="otherdiscp.html">Other Disciplines</a>
+                    <a href="achievements.html">Achievements</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Life at Fazaia <span class="arrow">&#9662;</span></a>
+                <div class="dropdown-content">
+                    <a href="facilities.html">Facilities</a>
+                </div>
+            </li>
+            <li><a href="imggallery.html">Picture Gallery</a></li>
+            <li><a href="#">Upcoming Events</a></li>
+            <li><a href="#">Admission</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <button class="menu-icon" onclick="toggleSidebar()">&#9776;</button>
+    </nav>
+
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="2500">
+            <h1>O <span>&</span> A Levels</h1>
+            <p>Fazaia chain is determined to bring innovation both in teaching and learning. Academic Levels at Fazaia
+                chain of Schools and Colleges are designed to meet the needs of the 21st century, of individual students
+                as well as the needs of local and global communities.
+            </p>
+        </div>
+    </div>
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+        <div class="dropdown-sidebar">
+            <button class="dropbtn-sidebar" onclick="toggleSidebarDropdown('academics-dropdown')">Academics <span
+                    class="arrow">&#9662;</span></button>
+            <div id="academics-dropdown" class="dropdown-content-sidebar">
+                <a href="oalvl.html" onclick="closeSidebar()">O & A Levels</a>
+                <a href="otherdiscp.html" onclick="closeSidebar()">Other Disciplines</a>
+                <a href="achievements.html" onclick="closeSidebar()">Achievements</a>
+            </div>
+        </div>
+        <a href="#" onclick="closeSidebar()">Home</a>
+        <a href="index.html" onclick="closeSidebar()">About Us</a>
+        <a href="achievements.html" onclick="closeSidebar()">Achievements</a>
+        <div class="dropdown-sidebar">
+            <button class="dropbtn-sidebar" onclick="toggleSidebarDropdown('life-fazaia-dropdown')">Life at Fazaia <span
+                    class="arrow">&#9662;</span></button>
+            <div id="life-fazaia-dropdown" class="dropdown-content-sidebar">
+                <a href="facilities.html" onclick="closeSidebar()">Facilities</a>
+            </div>
+        </div>
+        <a href="#" onclick="closeSidebar()">Upcoming Events</a>
+        <a href="#" onclick="closeSidebar()">Contact Us</a>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        function toggleSidebarDropdown(dropdownId) {
+            const dropdowns = document.querySelectorAll('.dropdown-content-sidebar');
+            dropdowns.forEach(dropdown => {
+                if (dropdown.id === dropdownId) {
+                    dropdown.classList.toggle('show');
+                } else {
+                    dropdown.classList.remove('show');
+                }
+            });
+        }
+
+        function closeSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.remove('active');
+            const dropdowns = document.querySelectorAll('.dropdown-content-sidebar');
+            dropdowns.forEach(dropdown => dropdown.classList.remove('show'));
+        }
+    </script>
+
+    <!-- Curriculum Starts from here -->
+
+    <section class="Cirriculum-section">
+        <div class="Cirriculum-content">
+            <div class="text-content" data-aos="fade-right" data-aos-duration="2500">
+                <h2 class="Cirriculum-heading">Cirriculum</h2>
+                <p class="Cirriculum-paragraph">Welcome to Fazaia Intermediate College, O-Level Section!</p>
+                <p class="Cirriculum-paragraph">In the Cambridge section of Fazaia Chains of Schools and Colleges, we
+                    empower students with academic and interpersonal skills essential for becoming confident,
+                    articulate, and adaptable thinkers, preparing them to be productive members of society. Committed to
+                    fostering innovation in both teaching and learning, our academic levels are meticulously crafted to
+                    cater to the diverse needs of students in the 21st century, as well as to meet the demands of local
+                    and global communities.</p>
+            </div>
+            <div class="image-content" data-aos="fade-left" data-aos-duration="2500">
+                <img src="Assets/about-img-2.jpg" alt="FIC E9 Campus">
+            </div>
+        </div>
+    </section>
+
+    <hr>
+    <!-- Curriculum Ebds here -->
+
+    <!-- O Level Curriculum -->
+
+    <section class="o-level">
+        <button class="collapsible" data-aos="fade" data-aos-duration="2500">O-Level Section &#9662;</button>
+        <div class="content">
+            <div class="o-level-left">
+                <h2>O Level Curriculum </h2>
+                <p>The O Level program at Fazaia Inter college provides students with a strong foundation in key
+                    subjects, fostering critical thinking, problem-solving skills, and a deep understanding of each
+                    subject area. Students typically undertake a range of subjects, including but not limited to:</p>
+                <ul>
+                    <li>Mathematics</li>
+                    <li>English Language</li>
+                    <li>Sciences (Physics, Chemistry, Biology)</li>
+                    <li>Computer Science</li>
+                    <li>Urdu</li>
+                    <li>Pakistan Studies</li>
+                    <li>Islamiat</li>
+
+                </ul>
+            </div>
+            <div class="o-level-right">
+                <img src="Assets/3.jpg" alt="O-Level Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- A Level Curriculum -->
+
+    <section class="a-level">
+        <button class="collapsible" data-aos="fade" data-aos-duration="2500">A-Level Section &#9662;</button>
+        <div class="content">
+            <div class="a-level-left">
+                <h2>A Level Curriculum </h2>
+                <p>The A Level program builds upon the O Level foundation, offering students the opportunity to
+                    specialize in their chosen subjects. A Levels are recognized worldwide as a high standard of
+                    academic achievement and are crucial for university admission. Subjects offered at A Level include:
+                </p>
+                <ul>
+                    <li>Mathematics</li>
+                    <li>English Language</li>
+                    <li>Sciences (Physics, Chemistry, Biology)</li>
+                    <li>Global Perspective/ Psychology</li>
+                    <li>Business & Accounting</li>
+                </ul>
+            </div>
+            <div class="a-level-right">
+                <img src="Assets/4.jpg" alt="O-Level Image">
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+    <hr>
+
+    <!-- Curriculum Ends here -->
+
+
+    <!-- Faculty Starts from here -->
+
+    <section class="Faculty-section">
+        <div class="Faculty-content">
+            <div class="text-content" data-aos="fade-right" data-aos-duration="2500">
+                <h2 class="Faculty-heading">Faculty Members</h2>
+                <p class="Faculty-paragraph">Inspiring Excellence, Shaping Futures</p>
+                <p class="Faculty-paragraph">At Fazaia School and College, we take immense pride in our dedicated and
+                    highly qualified teachers. Each teacher brings expertise, experience, and a passion for education,
+                    ensuring that our students receive an excellent education. They are committed mentors who inspire
+                    academic success and personal growth. Continuously engaging in professional development, our
+                    teachers foster an innovative and supportive learning environment where every student can thrive.
+                </p>
+            </div>
+            <div class="image-content" data-aos="fade-left" data-aos-duration="2500">
+                <img src="Assets/faculty.jpg" alt="FIC E9 Campus">
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Ends here -->
+
+    <!-- Faculty table  Starts from here -->
+
+    <section class="faculty">
+        <h2 class="faculty-heading" data-aos="fade-right" data-aos-duration="2500">O level Faculty</h2>
+        <div class="table-container">
+            <table class="faculty-table" data-aos="fade-left" data-aos-duration="2500">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Subject</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Name">Ms Shah Vardut Fatima</td>
+                        <td data-label="Subject">English</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Name">Mrs Zahida Zamir</td>
+                        <td data-label="Subject">Urdu</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Name">Mr Aqeel shafiq</td>
+                        <td data-label="Subject">Mathematics</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Name">Ms Aatika Yousaf</td>
+                        <td data-label="Subject">Computer Science</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Name">Ms zofishan Arshad</td>
+                        <td data-label="Subject">Chemistry</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Name">Ms Alia Noreen </td>
+                        <td data-label="Subject">Biology</td>
+                    </tr>
+
+                    <tr>
+                        <td data-label="Name">Mr Rehmat Ayaz</td>
+                        <td data-label="Subject">Islamiat</td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+    <section class="faculty">
+        <h2 class="faculty-heading" data-aos="fade-right" data-aos-duration="2500">A level Faculty</h2>
+        <div class="table-container">
+            <table class="faculty-table" data-aos="fade-left" data-aos-duration="2500">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Subject</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Name">Ms Ayesha Mansoor</td>
+                        <td data-label="Subject">English</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Name">Mr AdnanAlam</td>
+                        <td data-label="Subject">Chemistry</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Name">Mr Gul Khatab</td>
+                        <td data-label="Subject">Mathematics</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Name">Dr Azeem Sabir</td>
+                        <td data-label="Subject">Psychology</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Name">Mr Faraz Ali Khan</td>
+                        <td data-label="Subject">Business & Accounting</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Name">Ms Talat Feroz</td>
+                        <td data-label="Subject">Biology</td>
+                    </tr>
+
+                    <tr>
+                        <td data-label="Name">Mr Shahat Khan</td>
+                        <td data-label="Subject">Business</td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+    <!-- Faculty table  ends from here -->
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

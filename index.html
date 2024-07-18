@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="Css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo"><img src="Assets/logo.jpg" alt="Logo"></div>
+        <ul class="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Academics <span class="arrow">&#9662;</span></a>
+                <div class="dropdown-content">
+                    <a href="oalvl.html">O & A Levels</a>
+                    <a href="otherdiscp.html">Other Disciplines</a>
+                    <a href="achievements.html">Achievements</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Life at Fazaia <span class="arrow">&#9662;</span></a>
+                <div class="dropdown-content">
+                    <a href="facilities.html">Facilities</a>
+                </div>
+            </li>
+            <li><a href="imggallery.html">Picture Gallery</a></li>
+            <li><a href="#">Upcoming Events</a></li>
+            <li><a href="#">Admission</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <button class="menu-icon" onclick="toggleSidebar()">&#9776;</button>
+    </nav>
+    
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="2000">
+            <h1><span>About Us </span></h1>
+            <p>Explore our vibrant campus life, where every student is encouraged to achieve their full potential academically, socially, and personally. We believe in nurturing well-rounded individuals who are equipped to excel in a rapidly changing global landscape.
+            </p>
+        </div>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+        <div class="dropdown-sidebar">
+            <button class="dropbtn-sidebar" onclick="toggleSidebarDropdown('academics-dropdown')">Academics <span
+                    class="arrow">&#9662;</span></button>
+            <div id="academics-dropdown" class="dropdown-content-sidebar">
+                <a href="oalvl.html" onclick="closeSidebar()">O & A Levels</a>
+                <a href="otherdiscp.html" onclick="closeSidebar()">Other Disciplines</a>
+                <a href="achievements.html" onclick="closeSidebar()">Achievements</a>
+            </div>
+        </div>
+        <a href="#" onclick="closeSidebar()">Home</a>
+        <a href="index.html" onclick="closeSidebar()">About Us</a>
+        <a href="achievements.html" onclick="closeSidebar()">Achievements</a>
+        <div class="dropdown-sidebar">
+            <button class="dropbtn-sidebar" onclick="toggleSidebarDropdown('life-fazaia-dropdown')">Life at Fazaia <span
+                    class="arrow">&#9662;</span></button>
+            <div id="life-fazaia-dropdown" class="dropdown-content-sidebar">
+                <a href="facilities.html" onclick="closeSidebar()">Facilities</a>
+            </div>
+        </div>
+        <a href="#" onclick="closeSidebar()">Upcoming Events</a>
+        <a href="#" onclick="closeSidebar()">Contact Us</a>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        function toggleSidebarDropdown(dropdownId) {
+            const dropdowns = document.querySelectorAll('.dropdown-content-sidebar');
+            dropdowns.forEach(dropdown => {
+                if (dropdown.id === dropdownId) {
+                    dropdown.classList.toggle('show');
+                } else {
+                    dropdown.classList.remove('show');
+                }
+            });
+        }
+
+        function closeSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.remove('active');
+            const dropdowns = document.querySelectorAll('.dropdown-content-sidebar');
+            dropdowns.forEach(dropdown => dropdown.classList.remove('show'));
+        }
+    </script>
+
+      <!-- Intro Starts From Here -->
+
+      <section class="introduction-section">
+        <div class="introduction-content" >
+            <div class="text-content"  data-aos="fade-right"
+            data-aos-duration="2500">
+                <h2 class="introduction-heading">Introduction</h2>
+                <p class="introduction-paragraph">Welcome to Fazaia Intermediate College, O-Level Section!</p>
+                <p class="introduction-paragraph">Dear Students, Parents, and Visitors</p>
+                <p class="introduction-paragraph">FIC E9 Islamabad is a distinguished educational institution offering both Cambridge and Federal Board curricula, accommodating students from preparatory grades to Grade 12. Situated in the heart of Islamabad, the school provides a conducive environment for academic excellence and holistic development.</p>
+                <p class="introduction-paragraph">Our mission is to inspire and empower students to become compassionate leaders, critical thinkers, and global citizens. We believe that education is a powerful tool for transformation and are dedicated to helping students reach their full potential.</p>
+                <p class="introduction-paragraph">The institution places a strong emphasis on co-curricular activities as integral components of its educational philosophy. These activities are meticulously designed to foster character building and enhance personality development among students. From sports to arts, debates, drama, and community service initiatives, FIC E9 Islamabad ensures a well-rounded education that goes beyond textbooks.</p>
+                <p class="introduction-paragraph">Thank you for visiting our website. We invite you to discover more about how Fazaia Intermediate College prepares students for a successful future.</p>
+            </div>
+            <div class="image-content" data-aos="fade-left"
+            data-aos-duration="2500">
+                <img src="Assets/principal.jpg" alt="FIC E9 Campus">
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Ends Here -->
+
+        <!-- Mission Section Starts Here -->
+
+        <section class="mission-section">
+            <div class="container">
+                <h2 class="mission-heading"  data-aos="fade-right"
+                data-aos-duration="2500"> Our Mission</h2>
+                <p class="mission-description"  data-aos="fade-right"
+                data-aos-duration="2500">
+                    Our Mission is to provide high quality education and child care in a safe , respectful and inclusive environment that builds a foundation for life-long learning.
+                </p>
+                <h2 class="mission-heading" data-aos="fade-left"
+                data-aos-duration="2500"> Our Vision</h2>
+                <p class="mission-description" data-aos="fade-left"
+                data-aos-duration="2500">
+                    Our Vision is a community where all children feel loved , respected and encouraged to develop to their fullest potential.
+                </p>
+                <h2 class="mission-heading" data-aos="fade-right"
+                data-aos-duration="2500">Core Values</h2>
+                <p class="mission-description" data-aos="fade-right"
+                data-aos-duration="2500">
+                    INTEGRITY, COGNITION, APPLICATION
+                </p>
+            </div>
+        </section>
+    
+    
+        <!-- Mission Ends Here -->
+
+        
+    <!-- Overview Section Starts Here -->
+
+    <section class="college-overview">
+        <div class="overview-text" data-aos="fade-up"
+        data-aos-duration="2500">
+            <h2>College overview</h2>
+            <p>
+                Welcome to Fazaia Inter College E-9 Islamabad, where our campus stands as a testament to modern
+                educational architecture and innovative design. Our facilities are meticulously designed to foster an
+                environment conducive to learning and personal growth. From the moment you step onto our campus, you'll
+                be greeted by a blend of contemporary aesthetics and functional spaces. Our classrooms are equipped with
+                state-of-the-art technology and ergonomic furnishings, ensuring that students learn in comfort and with
+                access to the latest educational resources. The campus features specialized laboratories for science and
+                computer studies, alongside a comprehensive library that houses a wealth of digital and print resources.
+                We prioritize student well-being with ample green spaces and recreational areas where students can
+                unwind and socialize. Safety and accessibility are paramount, with modern security systems and
+                facilities designed to meet the needs of all students. At our campus isn't just a place of
+                education—it's a dynamic hub where students can explore, innovate, and prepare for a successful future
+                in a supportive and inspiring environment.
+
+            </p>
+        </div>
+        <div class="overview-images" >
+            <img src="Assets/about-img-1.jpg" alt="Campus Image 1" data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000">
+            <img src="Assets/about-img-2.jpg" alt="Campus Image 2" data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000">
+            <img src="Assets/about-img-3.jpg" alt="Campus Image 2" data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000">
+        </div>
+    </section>
+
+    <!-- Overview Section Ends Here -->
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

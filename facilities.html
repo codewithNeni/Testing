@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilities</title>
+    <link rel="stylesheet" href="Css/facstyle.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-logo"><img src="Assets/logo.jpg" alt="Logo"></div>
+        <ul class="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Academics <span class="arrow">&#9662;</span></a>
+                <div class="dropdown-content">
+                    <a href="oalvl.html">O & A Levels</a>
+                    <a href="otherdiscp.html">Other Disciplines</a>
+                    <a href="achievements.html">Achievements</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Life at Fazaia <span class="arrow">&#9662;</span></a>
+                <div class="dropdown-content">
+                    <a href="facilities.html">Facilities</a>
+                </div>
+            </li>
+            <li><a href="imggallery.html">Picture Gallery</a></li>
+            <li><a href="#">Upcoming Events</a></li>
+            <li><a href="#">Admission</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <button class="menu-icon" onclick="toggleSidebar()">&#9776;</button>
+    </nav>
+
+
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="2500">
+            <h1>Facilities  at <span>Fazaia</span></h1>
+            <p>To achieve the vision and educational goals set for Fazaia chain, all campuses of the network are equipped with state of the art teaching-learning resources within and outside classrooms. Fazaia campuses provide unique opportunities of learning and progressing to all students. 
+            </p>
+        </div>
+    </div>
+
+   
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+        <div class="dropdown-sidebar">
+            <button class="dropbtn-sidebar" onclick="toggleSidebarDropdown('academics-dropdown')">Academics <span
+                    class="arrow">&#9662;</span></button>
+            <div id="academics-dropdown" class="dropdown-content-sidebar">
+                <a href="oalvl.html" onclick="closeSidebar()">O & A Levels</a>
+                <a href="otherdiscp.html" onclick="closeSidebar()">Other Disciplines</a>
+                <a href="achievements.html" onclick="closeSidebar()">Achievements</a>
+            </div>
+        </div>
+        <a href="#" onclick="closeSidebar()">Home</a>
+        <a href="index.html" onclick="closeSidebar()">About Us</a>
+        <a href="achievements.html" onclick="closeSidebar()">Achievements</a>
+        <div class="dropdown-sidebar">
+            <button class="dropbtn-sidebar" onclick="toggleSidebarDropdown('life-fazaia-dropdown')">Life at Fazaia <span
+                    class="arrow">&#9662;</span></button>
+            <div id="life-fazaia-dropdown" class="dropdown-content-sidebar">
+                <a href="facilities.html" onclick="closeSidebar()">Facilities</a>
+            </div>
+        </div>
+        <a href="#" onclick="closeSidebar()">Upcoming Events</a>
+        <a href="#" onclick="closeSidebar()">Contact Us</a>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        function toggleSidebarDropdown(dropdownId) {
+            const dropdowns = document.querySelectorAll('.dropdown-content-sidebar');
+            dropdowns.forEach(dropdown => {
+                if (dropdown.id === dropdownId) {
+                    dropdown.classList.toggle('show');
+                } else {
+                    dropdown.classList.remove('show');
+                }
+            });
+        }
+
+        function closeSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.remove('active');
+            const dropdowns = document.querySelectorAll('.dropdown-content-sidebar');
+            dropdowns.forEach(dropdown => dropdown.classList.remove('show'));
+        }
+    </script>
+
+         <!-- Facilities Starts From Here -->
+
+         <section class="Facilities-section">
+            <div class="Facilities-content" >
+                <div class="text-content"  data-aos="fade-right"
+                data-aos-duration="2500">
+                    <h2 class="Facilities-heading">Facilities</h2>
+                    <p class="Facilities-paragraph">Welcome to Fazaia Intermediate College</p>
+                    <p class="Facilities-paragraph">At Fazaia Inter College, we are dedicated to providing comprehensive facilities that cater specifically to our Cambridge students. Our institution boasts state-of-the-art classrooms equipped with modern technology to enhance the learning experience. Our library is stocked with a wide array of resources, including Cambridge-approved textbooks and supplementary materials, ensuring students have access to the latest academic resources. To support their academic journey, we offer specialized coaching by experienced faculty members who are well-versed in the Cambridge curriculum. Our laboratories are equipped with advanced equipment to facilitate practical learning in subjects such as sciences and computer studies. Additionally, we prioritize extracurricular activities to promote holistic development, offering sports facilities and clubs where students can explore their interests beyond academics.</p>
+                </div>
+                <div class="image-content" data-aos="fade-left"
+                data-aos-duration="2500">
+                    <img src="Assets/img-1.JPG" alt="FIC E9 Campus">
+                </div>
+            </div>
+        </section>
+    
+        <!-- Facilities Ends Here -->
+
+        <hr>
+
+        <div class="gallery-section">
+            <h3 data-aos="fade-right" data-aos-duration="2000">Sports Ground :</h3>
+            <div class="gallery">
+                <!-- Demo Images -->
+                <img src="Assets/img-2.JPG" alt="Demo Image 1" data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="Assets/img-3.JPG" alt="Demo Image 2" data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="Assets/img-4.JPG" alt="Demo Image 3" data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="Assets/img-5.JPG"
+                    alt="Demo Image 4" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="gallery-section">
+            <h3 data-aos="fade-right" data-aos-duration="2000">Laboratories :</h3>
+            <div class="gallery">
+                <!-- Demo Images -->
+                <img src="Assets/lab-1.jpg" alt="Demo Image 1" data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="Assets/lab-2.jpg" alt="Demo Image 1" data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="Assets/lab-3.jpg" alt="Demo Image 1" data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="Assets/lab-4.jpg" alt="Demo Image 1" data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+            </div>
+        </div>
+
+        <hr>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

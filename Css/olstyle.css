@@ -1,0 +1,841 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #0000001f;
+}
+
+:root {
+    --mobile-h2-font-size: 2.2rem;
+    --dekstop-h2-fontsize: 3rem;
+}
+
+
+hr {
+    background-color: black;
+    height: 2px;
+    width: 80%;
+    margin: 0px auto;
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: black;
+    gap: 30px;
+}
+
+
+.navbar-logo img {
+    height: 100px;
+}
+
+
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    margin: 0 40px;
+    position: relative;
+}
+
+.navbar-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.arrow {
+    margin-left: 8px;
+    font-size: 12px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(85, 85, 197);
+    min-width: 190px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 122222;
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(125, 136, 236);
+    color: rgb(255, 255, 255);
+}
+
+.contact-us {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-us:hover {
+    background-color: #777;
+}
+
+.menu-icon {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(85, 85, 197);
+    padding-top: 60px;
+    transition: 0.3s;
+    z-index: 1000000;
+    overflow-x: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: white;
+    color: rgb(85, 85, 197);
+
+}
+
+.dropdown-sidebar {
+    position: relative;
+}
+
+.dropbtn-sidebar {
+    background-color: rgb(85, 85, 197);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content-sidebar {
+    display: none;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: rgb(85, 85, 197);
+    transition: max-height 0.3s ease-out;
+    max-height: 0;
+    /* Initially collapsed */
+}
+
+.dropdown-content-sidebar.show {
+    display: block;
+    max-height: 300px;
+    /* Adjust based on content */
+}
+
+.dropdown-content-sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown-content-sidebar a:hover {
+    background-color: white;
+    color: rgb(85, 85, 197);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 46px;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1218px) {
+    .navbar-links {
+        display: none;
+    }
+
+    .contact-us {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        color: black;
+        font-size: 50px;
+        border-radius: 40px;
+    }
+
+    .sidebar {
+        display: block;
+        width: 0;
+    }
+
+    .sidebar.active {
+        width: 250px;
+    }
+}
+
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background: url('Hero-img.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.801);
+    z-index: 1;
+}
+
+span {
+    color: #FF9534;
+}
+
+.arrow {
+    color: black;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    width: 60%;
+    margin-top: 0px;
+}
+
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    margin: 10px 0 0;
+    color: rgba(255, 255, 255, 0.938);
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-content {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1080px) {
+
+    .hero-section {
+        position: relative;
+        width: 100%;
+        height: 80vh;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        padding: 20px;
+        width: 100%;
+        margin-top: 100px;
+    }
+}
+
+/* Curricular starts from here */
+
+/* introduction Starts From Here */
+
+.Cirriculum-section {
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.Cirriculum-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.text-content {
+    flex: 1;
+    margin-right: 20px;
+    /* Space between text and image */
+}
+
+.image-content {
+    flex: 1;
+    max-width: 500px;
+    /* Adjust based on your design */
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    /* Optional: adds rounded corners to the image */
+}
+
+.Cirriculum-heading {
+    font-size: var(--dekstop-h2-fontsize);
+    margin: 0 0 20px;
+    color: #FF9534;
+}
+
+.Cirriculum-paragraph {
+    font-size: 1.1rem;
+    color: #22343D;
+    margin: 20px 0;
+}
+
+@media (max-width: 1068px) {
+    .Cirriculum-section {
+        padding: 3px 20px;
+        text-align: left;
+    }
+
+    .Cirriculum-content {
+        flex-direction: column-reverse;
+        /* Image comes before text on mobile and tablet */
+    }
+
+    .text-content {
+        margin-right: 0;
+        margin-bottom: 20px;
+        /* Space between text and image on mobile */
+    }
+
+    .image-content {
+        max-width: 100%;
+    }
+
+    .Cirriculum-heading {
+        font-size: var(--mobile-h2-font-size);
+    }
+
+    .Cirriculum-paragraph {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .Cirriculum-heading {
+        font-size: var(--mobile-h2-font-size);
+    }
+
+    .Cirriculum-paragraph {
+        font-size: 1rem;
+    }
+}
+
+
+/* Curricular Ends here */
+
+
+.o-level {
+    margin: 20px;
+    max-width: 1400px;
+    margin: 40px auto;
+}
+
+.collapsible {
+    background-color: rgb(85, 85, 197);
+    color: white;
+    margin: 20px auto;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.collapsible:hover {
+    background-color: rgb(125, 136, 236);
+    color: rgb(255, 255, 255);
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-out;
+}
+
+.o-level-left P {
+    margin-top: 30px;
+}
+
+.o-level-left h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #FF9534;
+}
+
+.o-level-left,
+.o-level-right {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.o-level-left {
+    flex: 1;
+    line-height: 30px;
+}
+
+.o-level-right {
+    flex: 1;
+}
+
+.o-level-right img {
+    width: 80%;
+    margin-left: 100px;
+}
+
+ul {
+    list-style-type: circle;
+    padding: 0;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .o-level {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .o-level-left,
+    .o-level-right {
+        flex: 1 1 100%;
+    }
+
+    .o-level-right img {
+        width: 90%;
+        margin-left: 20px;
+    }
+}
+
+/* A lvl Curriculum */
+
+.a-level {
+    margin: 20px;
+    max-width: 1400px;
+    margin: 40px auto;
+}
+
+.collapsible {
+    background-color: rgb(85, 85, 197);
+    color: white;
+    margin: 20px auto;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.collapsible:hover {
+    background-color: rgb(125, 136, 236);
+    color: rgb(255, 255, 255);
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-out;
+}
+
+.a-level-left P {
+    margin-top: 30px;
+}
+
+.a-level-left h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #FF9534;
+}
+
+.a-level-left,
+.a-level-right {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.a-level-left {
+    flex: 1;
+    line-height: 30px;
+}
+
+.a-level-right {
+    flex: 1;
+}
+
+.a-level-right img {
+    width: 500px;
+    margin-left: 100px;
+}
+
+ul {
+    list-style-type: circle;
+    padding: 0;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .a-level {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .a-level-right img {
+        width: 90%;
+        margin-left: 20px;
+    }
+
+    .a-level-left,
+    .a-level-right {
+        flex: 1 1 100%;
+    }
+
+    .collapsible {
+        background-color: rgb(85, 85, 197);
+        color: white;
+        margin: 0px auto;
+        border: none;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        width: 90%;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+}
+
+
+/* Faculty Starts From Here */
+
+.Faculty-section {
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.Faculty-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.text-content {
+    flex: 1;
+    margin-right: 20px;
+    /* Space between text and image */
+}
+
+.image-content {
+    flex: 1;
+    max-width: 500px;
+    /* Adjust based on your design */
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    /* Optional: adds rounded corners to the image */
+}
+
+.Faculty-heading {
+    font-size: var(--dekstop-h2-fontsize);
+    margin: 0 0 20px;
+    color: #FF9534;
+}
+
+.Faculty-paragraph {
+    font-size: 1.1rem;
+    color: #22343D;
+    margin: 20px 0;
+}
+
+@media (max-width: 1068px) {
+    .Faculty-section {
+        padding: 3px 20px;
+        text-align: left;
+    }
+
+    .Faculty-content {
+        flex-direction: column-reverse;
+        /* Image comes before text on mobile and tablet */
+    }
+
+    .text-content {
+        margin-right: 0;
+        margin-bottom: 20px;
+        /* Space between text and image on mobile */
+        order: 2;
+    }
+
+    .image-content {
+        max-width: 100%;
+        order: 1;
+    }
+
+    .Faculty-heading {
+        font-size: var(--mobile-h2-font-size);
+    }
+
+    .Faculty-paragraph {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .Faculty-heading {
+        font-size: var(--mobile-h2-font-size);
+    }
+
+    .Faculty-paragraph {
+        font-size: 1rem;
+    }
+}
+
+
+/* Faculty Ends here */
+
+
+/* <!-- Faculty Table Starts from here --> */
+
+
+section.faculty {
+    padding: 20px;
+    text-align: center;
+}
+
+.faculty-heading {
+    margin-bottom: 20px;
+    font-size: var(--dekstop-h2-fontsize);
+    color: #333;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.faculty-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 18px;
+    min-width: 400px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faculty-table th,
+.faculty-table td {
+    padding: 12px 15px;
+    text-align: center;
+    /* Center align for base styles */
+    width: 50%;
+    overflow: hidden;
+}
+
+.faculty-table th {
+    background-color: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.faculty-table tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.faculty-table tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.faculty-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+
+    .faculty-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0 auto;
+        font-size: 18px;
+        min-width: 300px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+
+    .faculty-table th,
+    .faculty-table td {
+        padding: 12px 15px;
+        text-align: right;
+        /* Center align for base styles */
+        width: 50%;
+    }
+
+    .faculty-heading {
+        font-size: var(--mobile-h2-font-size);
+    }
+
+    .faculty-table th {
+        display: none;
+    }
+
+    .faculty-table,
+    .faculty-table tbody,
+    .faculty-table tr,
+    .faculty-table td {
+        display: block;
+        width: 100%;
+        text-align: right;
+    }
+
+    .faculty-table tr {
+        margin-bottom: 15px;
+    }
+
+    .faculty-table td {
+        text-align: right;
+        /* Center align for mobile view */
+        padding-left: 0;
+        /* Adjust padding for mobile view */
+        position: relative;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .faculty-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+/* <!-- Faculty Table Ends from here --> */
